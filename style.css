@@ -1,0 +1,211 @@
+/* Custom CSS Styles for Steven Ken Pontillas Portfolio */
+
+/* Root Variables for Colors */
+:root {
+    --primary: #FF5722;
+    --secondary: #E64A19;
+    --accent: #FF7043;
+    --dark: #1A1A1A;
+    --dark-card: #2A2A2A;
+}
+
+/* Body Styles */
+body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23333" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    opacity: 0.1;
+}
+
+/* Artistic photo effects inspired by the reference */
+.artistic-photo {
+    position: relative;
+    overflow: hidden;
+}
+
+.artistic-photo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 30% 20%, transparent 50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.artistic-photo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.7) 100%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Enhanced gradient radials */
+.bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* Dramatic shadow effects */
+.dramatic-shadow {
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 10px 20px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Tailwind Custom Colors (this will be handled by Tailwind config in HTML) */
+/* These styles are kept for reference but will be replaced by Tailwind utilities */
+
+/* Animation Delays for floating elements */
+.animation-delay-1 {
+    animation-delay: 1s;
+}
+
+.animation-delay-2 {
+    animation-delay: 2s;
+}
+
+.animation-delay-half {
+    animation-delay: 0.5s;
+}
+
+/* Custom transitions for smooth interactions */
+.transition-all-300 {
+    transition: all 0.3s ease;
+}
+
+.transition-transform-700 {
+    transition: transform 0.7s ease;
+}
+
+.transition-transform-500 {
+    transition: transform 0.5s ease;
+}
+
+/* Fade-in animation styles for scroll observer */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile responsiveness helpers */
+@media (max-width: 768px) {
+    .hero-bg::before {
+        opacity: 0.05;
+    }
+}
+
+/* Smooth scrolling behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom focus styles for accessibility */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* Loading states */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Hover effects for interactive elements */
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-scale-110:hover {
+    transform: scale(1.1);
+}
+
+/* Backdrop blur support */
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
+/* Progress Bar Widths */
+.progress-python {
+    width: 50% !important;
+}
+
+.progress-arduino {
+    width: 90% !important;
+}
+
+.progress-web {
+    width: 45% !important;
+}
+
+/* Animation delays for specific elements */
+.delay-half {
+    animation-delay: 0.5s;
+}
+
+.delay-1 {
+    animation-delay: 1s;
+}
+
+.delay-2 {
+    animation-delay: 2s;
+}
+
+/* Object positioning for images */
+.object-hero {
+    object-position: center 20%;
+}
+
+.object-about {
+    object-position: center 25%;
+}
